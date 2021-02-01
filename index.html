@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="client.css" />
+    <title>Gambit-challenge.com</title>
+  </head>
+  <body>
+    <!-- start recieving data -->
+    <button>Connect to meter</button>
+    <!-- current value -->
+    <div id="cur-container">
+      <div id="cur-name-container">
+        <span id="cur-name">Flow Rate</span>
+        <span id="cur-name-arrow">▼</span>
+      </div>
+      <div>
+        <span id="cur-val">0</span>
+        <span id="cur-unit">m<sup>3</sup>/h</span>
+      </div>
+    </div>
+    <!-- select val -->
+    <div id="select"></div>
+    <!-- chart -->
+    <div id="chart"></div>
+    <!-- instruction -->
+    <h1>Instruction</h1>
+    <ul>
+      <li>Connect to the meter to receive data</li>
+      <li>Select item of your interest with ▼</li>
+      <li>LONG and REAL4 values are shown on chart</li>
+      <li>They fluctuate with 30% for interactivity</li>
+      <li>Disconnect from the meter</li>
+      <li>Select item with ▼ to see actual values from the task without fluctuation</li>
+    </ul>
+    <!-- attach jQuery + sockets + charts + own js  -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

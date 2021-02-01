@@ -1,0 +1,126 @@
+* {
+  /* *** normilize *** */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #e1e1e1;
+  outline: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #414141;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin: 5px;
+  margin-top: 50px;
+  padding: 10px;
+  border: 2px solid grey;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  border: 1px solid #dedede;
+  color: white;
+}
+
+#cur-container {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#cur-name-container {
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+#cur-name-container:hover * {
+  color: white;
+}
+
+#cur-name {
+  color: darkgrey;
+}
+
+#cur-name-arrow {
+  font-size: 14px;
+  color: rgb(110, 110, 110);
+}
+
+#cur-val {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+#cur-unit,
+sup {
+  font-style: italic;
+  color: darkgrey;
+}
+
+#select {
+  display: none;
+  top: 50px;
+  color: white;
+  text-align: left;
+  font-size: 16px;
+  padding: 20px;
+}
+
+#select > div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+}
+
+#select > div:hover {
+  border: 1px solid white;
+}
+
+#chart {
+  width: 70%;
+  height: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+  #chart {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 16px;
+  margin: 10px;
+  font-weight: 200;
+}
+
+ul {
+  width: 315px;
+}
+
+ul li {
+  font-size: 14px;
+  color: rgb(190, 190, 190);
+  margin-left: 20px;
+}

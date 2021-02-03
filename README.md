@@ -1,37 +1,47 @@
 # gambit-challenge.com
 
-How I did gambit-challenge task.
+[www.gambit-challenge.com](http://gambit-challenge.com/)
 
-01. Meter periodically sends data to a client. Previously I have requested a server and got a response. Our situation is vice-versa. Google how to do it.
-02. WebSocket is a solution, which is supported by Node.js server, which I never used. Good opportunity to try.
-03. Purchased a nice domain name for the project and deployed it to my server. It saved time for looking for a free hosting.
-04. Watched tutorial from Traversy Media about Node.js deployment + Node Express and with some additional research smoothly deployed it.
-05. Good side of Node.js is that it uses JavaScript language, no need to learn new syntax.
-06. Installed WebSocket via NPM manager https://socket.io/
-07. Spent one evening to send and receive periodical data from server.
-08. Succeeded to send raw string from the homework task from the server to a client and retrieve it in the browser.
-08. For some reason Node.js disconnects after some idle period. Investigated the problem.
-09. Installed production process manager PM2, which takes care of server reboots and automatic updates in case of a file update.
-10. Now webpage is always online.
-11. Read numerous articles about MODBUS ASCII format, about dec, hex, binary values representation, about bits and bytes.
-12. Spoke with colleagues and friends who worked with PLCs, got overall understanding and some hints.
-13. C language is the best for data type conversion, but after principle understanding I felt that I may do it in JavaScript just working with strings.
-14. Succeeded to make 5 conversion functions for LONG, Real4, INTEGER, BIT, BCD according to the instructions from device manual.
-15. These are all problems I tackled to solve the challenge.
+[Initial task](https://github.com/gambit-labs/challenge)
 
-How the app works.
+<img src="http://gambit-challenge.com/screenshot.png" alt="screenshot" height="auto" width="300"/>
 
-Server side.
+## How I did gambit-challenge task.
 
-server.js
-Lines 1...11 - Server initialization.
-Lines 17...29 - Function to send periodically (1s) data from meter with a current time stamp. To make the task more interactive decided to replace the first string from the string with a dynamic time stamp.
-Lines 31...53 - Socket.io connection start / stop + start sending data.
-Lines 56...157 - Meter's raw data string.
+1. A meter periodically sends data to a client. Previously I sent requests to a server and got a response. Our situation is vice-versa.
+1. WebSocket is a solution, which is supported by Node.js server, which I never used. Good opportunity to try.
+1. Purchased a nice domain name for the project and deployed it to my server.
+1. Watched tutorial from Traversy Media about Node.js deployment and with some additional research smoothly deployed it.
+1. Good side of Node.js is that it uses JavaScript language, no need to learn new syntax.
+1. Installed WebSocket via NPM manager https://socket.io/
+1. Spent one evening to send and receive periodical data from a server. There are still some questions to be solved, but it is not today's topic.
+1. Succeeded to send task's raw string from the server to a client and retrieve it in the browser.
+1. For some reason Node.js server disconnects after some idle period. Investigated the problem.
+1. Installed production process manager PM2, which takes care of server reboots in case of a problem or a file update.
+1. Now webpage is always online.
+1. Read numerous articles about MODBUS ASCII format, about dec, hex, binary values representation, about bits and bytes.
+1. Spoke with colleagues and friends who worked with PLCs, got overall understanding and some hints.
+1. C language is the best for data type conversion, but after understanding the principle I felt that I may do it in JavaScript just working with strings. At least for this task.
+1. Succeeded to make 5 conversion functions for LONG, Real4, INTEGER, BIT, BCD according to the instructions from the device manual.
+1. These are all major problems I tackled to solve the challenge.
 
-Client side.
+## How the app works.
 
-index.html
+### Server side.
+
+#### server.js
+1. **Lines 1...11**\
+Node.js server initialization.
+1. **Lines 17...29**\
+Function to send periodically (1s) data from a meter with a current time stamp. To make the task more interactive decided to replace static time stamp from the first line by a dynamic one.
+1. **Lines 31...53**\
+Socket.io connection start / stop + data send .
+1. **Lines 56...157**\
+Variable with meter's raw data string.
+
+### Client side.
+
+#### index.html
 
 Simple html with:
 1. Button to establish connection with meter.

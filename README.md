@@ -65,18 +65,18 @@ Simple style with:
 
 Basic parts to explain how the application works
 
-1. **Lines 9...693**
+1. **Lines 9...693**  
 Global array (masterArr) of objects with information about meter registers from the manual. We will work with this array adding raw and converted values.
-1. **Line 697**
+1. **Line 697**  
 Index of element in masterArr of selected meter's option by a user.
-1. **Lines 700...754**
+1. **Lines 700...754**  
 Establish connection with Sockets.io by a button click. On receipt of data from the meter we parse and store data into masterArr, convert raw values into human representation, show it on the display in numeric and graph view.
 _Note. We change LONG & Real4 values by 30% for interactive representation on a chart (otherwise graph is flat). Actual values stay unchanged in masterArr_.
-1. **Lines 757...1059**
+1. **Lines 757...1059**  
 Functions to convert LONG, Real4, INTEGER, BIT, BCD into human format. There are also functions to save human values into respective elements of masterArr every time client receives data from a meter.
-1. **Lines 1062...1148**
+1. **Lines 1062...1148**  
 Function for initializing and updating chart. When data comes from a meter, we add it to the separate array and represent those values on a chart.
-1. **Lines 1151...1180**
+1. **Lines 1151...1180**  
 Functions to parse and distribute raw data from a meter to the masterArr.
-1. **Lines 1183...1129**
+1. **Lines 1183...1129**  
 Logic for choosing an item to be shown on a display. For INTEGER, BIT, BCD chart is not shown.

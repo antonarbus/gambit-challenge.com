@@ -59,7 +59,7 @@ Simple style with:
 1. Normalization on top.
 1. Flex for body element to centre all items and view it as a column.
 1. Some :hover pseudo classes for clickable elements.
-1. One media query for chart div, because it does not support width: auto.
+1. One media query for chart div, because it does not support width:auto.
 
 #### client.js
 
